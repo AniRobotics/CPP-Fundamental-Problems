@@ -23,7 +23,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 using namespace std;
 
 int main(int argc, char** argv) {
-  int prices[] = {7,1,5,3,6,4};
+  git aint prices[] = {7,1,5,3,6,4};
   //int prices[] = {7,6,4,3,1};
   
   int minBuyCost = 1000;
