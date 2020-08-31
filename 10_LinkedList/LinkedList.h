@@ -1,10 +1,10 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
 #include <iostream>
 #include <memory>
 
 using namespace std;
-
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
 
 // Node structure of LinkedList
 struct Node {

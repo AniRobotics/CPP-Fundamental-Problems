@@ -16,34 +16,15 @@ Could you do this in one pass?
 */
 
 #include "LinkedList.h"
-#include <vector>
+#include "Utils.h"
 
 int main (int rgc, char** argv) {
   std::vector<int> vec = {1,2,3,4,5};
   int k = 2;
 
-  // Build the Linked List
-  std::shared_ptr<Node> head;
-  std::shared_ptr<Node> currentNode;
-  for (int n : vec) {
-    if (head== nullptr) {
-      head = std::make_shared<Node> (Node(n));
-      currentNode = head;
-      continue;
-    }
-    currentNode->next = std::make_shared<Node> (Node(n));
-    currentNode = currentNode->next;
-  }
-
-  // Traverse the Linked List
-  int counter = 0;
-  std::shared_ptr<Node> travCurrent = head;
-
-  while (travCurrent != nullptr) {
-    std::cout << travCurrent->value << std::endl;
-    travCurrent = travCurrent->next;
-    counter++;
-  }
+  // Build and print the Linked List
+  std::shared_ptr<Node> head = buildLinkedList(vec);
+  PrintLinkedList(head);
 
   // Remove the k^{th} from the end of the linked list
   std::cout << "Remove the k^{th} node from the linked list" << std::endl;
@@ -63,7 +44,7 @@ int main (int rgc, char** argv) {
   slow->next = slow->next->next;
 
   // Traverse the modified Linked List
-  travCurrent = head;
+  std::shared_ptr<Node> travCurrent = head;
   while (travCurrent != nullptr) {
     std::cout << travCurrent->value << std::endl;
     travCurrent = travCurrent->next;
