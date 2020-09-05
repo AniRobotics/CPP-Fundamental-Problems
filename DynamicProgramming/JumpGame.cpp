@@ -32,6 +32,9 @@ int main(int argc, char** argv) {
   // We will assume, we already have reached the last index and need to figure
   // out, can we go back to index 0.
 
+  // This problem is very similar to frog jump problem, unlike this problem, in frog
+  // jump problem jump size varies so we need to apply back tracking.
+
   int goodIndex = nums.size() - 1;
   for (int i = nums.size() - 2; i >= 0; i--) {
     if (i+nums[i] >= goodIndex) {
