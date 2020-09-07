@@ -30,7 +30,7 @@ void TraverseGraph(std::shared_ptr<Node> node) {
 
     if (visited.find(currentNode->value) == visited.end()) {
       std::cout << "Exploring node: " << currentNode->value << std::endl;
-      std::cout << "Children: ";
+      std::cout << "neighbors: ";
       for (auto n : currentNode->neighbor) {
         std::cout << n->value << ",";
         q.push(n);

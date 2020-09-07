@@ -3,7 +3,7 @@ The graph we will be preparing would look like as foollowing
 A -------------- B
 |                |
 |                |
-C---------------D
+C----------------D
 */
 
 #include <iostream>
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
         }
         q.push(n);
       }
-    }    
+    }
     // Check the currentNode as visited
     visited.insert(currentNode->value);
   }
