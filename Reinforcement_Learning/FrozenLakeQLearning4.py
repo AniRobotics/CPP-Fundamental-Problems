@@ -10,7 +10,7 @@ if __name__ == '__main__':
     agent = Agent(lr=0.001, gamma=0.9, eps_start=1.0, eps_end=0.01, eps_dec=0.9999995, n_actions=4, n_states=16)
     scores = []
     win_pct_list = []
-    n_games = 100
+    n_games = 500000
 
     for i in range(n_games):
         done = False

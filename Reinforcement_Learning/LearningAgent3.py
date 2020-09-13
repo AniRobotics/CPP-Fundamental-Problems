@@ -33,8 +33,8 @@ class Agent(object):
         actions = np.array([self.Q[(state_, a)] for a in range(self.n_actions)])
         a_max = np.argmax(actions)
         self.Q[(state, action)] += self.lr*(reward + self.gamma*self.Q[(state_, a_max)] - self.Q[(state, action)])
-        if (self.Q[(state, action)] > 0):
-            print("\n\n\n\n===================")
-            print(self.Q[(state, action)])
-            print("\n\n\n\n===================")
+        # if (self.Q[(state, action)] > 0):
+        #     print("\n\n\n\n===================")
+        #     print(self.Q[(state, action)])
+        #     print("\n\n\n\n===================")
         self.decreament_epsilon()
